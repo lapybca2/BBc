@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+#rect{
+	background-color:#151515;
+	width:400px;
+	height:600px;
+}
+#ha{
+	font-size:40px;
+	color:white;
+	margin-bottom:20px;
+	
+}
+#name{
+	height:100px;
+	font-size:40px;
+	padding:10px;
+	color:white;
+	border-top:2px solid white;
+	border-bottom:2px solid white;
+}
+#count{
+	font-size:60px;
+	color:yellow;
+}
+#norm{
+	color:white;
+	font-size:15px;
+}
+</style>
+<title>
+javascript
+</title>
+<body>
+<h1> this is only testing</h1>
+<center>
+<div id="rect">
+<span id="ha">Hotel availability</span>
+<div id="name">Park</div>
+<div id ="count">43</div> <br><div id="norm">room left</div>
+
+</div>
+</center>
+<script>
+var hotel={
+	name1:'quy',
+	room:50,
+	book:35,
+	check:function(){
+		return this.room-this.book;
+	}
+};
+var x=document.getElementById("name");
+x.textContent=hotel.name1;
+var y=document.getElementById("count");
+y.innerHTML=document.write("hjj");
+
+</script>
+</body>

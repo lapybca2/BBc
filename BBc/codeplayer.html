@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>CodePlayer</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</script>
+<style>
+ .header{
+	    margin:0px;
+        background-color:#eeeeee;
+		height:40px;
+		width:100%;
+       }
+#logo{
+float:left;
+font-family:Sans-serif;
+font-size:20px;
+padding-left:10px;
+padding-top:10px;
+}
+.buttonContainer{
+ float:left;
+ margin-top:6px;
+ margin-left:410px;
+}
+.active{
+background-color:#ebf3fe;
+
+}
+.highlighted{
+background-color:gray;
+}
+.button{
+	float:left;
+	border:2px solid gray;
+	height:20px;
+	padding-top:15px;
+	border-right:none;
+	cursor:pointer;
+	
+}
+#HTML{
+	border-top-left-radius:6px;
+	border-bottom-left-radius:6px;
+	padding-top:7px;
+	padding-left:10px;
+	width:55px;
+	
+}
+#CSS{
+	width:40px;
+	padding-top:7px;
+	padding-left:15px;
+}
+#JavaScript{
+	width:80px;
+	padding-left:14px;
+	padding-top:7px;
+}
+#Output{
+	border-top-right-radius:6px;
+	border-bottom-right-radius:6px;
+	border-right:2px solid gray;
+	width:50px;
+	padding-left:10px;
+	padding-top:7px;
+}
+.htmlc{
+resize:none;
+border-top:none;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+<div id="logo"> Code Player </div>
+<div class="buttonContainer">
+<div class="button active" id="HTML">HTML</div>
+<div class="button" id="CSS">CSS</div>
+<div class="button" id="JavaScript">JavaScript</div>
+<div class="button active" id="Output">Output</div>
+</div>
+</div>
+<textarea  class="htmlc">hello world</textarea>
+<iframe class="htmlc"  ></iframe>
+<script>
+$(".htmlc").height($(window).height()-$(".header").height()-20);
+$(".htmlc").width(($(window).width()/2)-20);
+$(".button").click(function(){
+$(this).toggleClass("active");
+});
+$(".button").hover(function(){
+	$(this).addClass("highlighted");
+},function(){
+	$(this).removeClass("highlighted");
+});
+$("textarea").bind('change keyup paste',function(){
+       $( "iframe" ).contents().find( "html" ).html( $("textarea").val());
+});
+</script>
+
+</body>
+
+</html>

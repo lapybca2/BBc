@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+body{
+background-color:#7a0402;
+
+}
+.tool{
+	width:450px;
+	height:600px;
+ margin:auto;
+ background-color:white;
+}
+#Tooltip{
+	width:445px;
+	height:70px;
+	font-size:30px;
+	background-color:#ea0f74;
+	border:3px solid #ea0f74;
+	border-radius:10px 10px 0px 0px;
+}
+#tooltip span{
+	color:white;
+	font-size:30px;
+	position:relative;
+	left:170px;
+	top:15px;
+}
+ input[type=text]
+{
+	height:40px;
+	width:200px;
+	position:relative;
+	left:10px;
+	font-size:20px;
+	color:blue;
+	border:2px solid gray;
+	border-radius:5px;
+}
+#billamt{
+	position:relative;
+	left:60px;
+	font-size:20px;
+}
+</style>
+<title>
+Tooltip
+</title></head>
+<body>
+<div class="tool">
+<div id="Tooltip">
+<span>Tooltip</span>
+</div>
+<div id="bill">
+<p id="billamt">enter the amount </p>
+<p id="billamt">$ <input  type="text" placeholder="enter the amount"</input></p>
+</div>
+<div id="perc">
+<select>
+<option id="selperc" selected value="0">chose any one</option>
+<option id="selperc" value="0.3">30%-extendible</option>
+<option id="selperc" value="0.2">20%-exelent</option>
+<option id="selperc" value="0.10">10%-good</option>
+<option id="selperc" value="0.05">5%-bad</option>
+
+</select> 
+</div>
+<p>how many people</p>
+<input id="billamt" type="text" placeholder="enter the number of people"</input>
+<button id="btn">calculate</button>
+<div id="calc">
+<p>tooltip</p>
+<p id="amt"></p>
+<small> for each</small>
+</div>
+</div>
+</body>

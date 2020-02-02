@@ -1,0 +1,53 @@
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</script>
+<link href="C:\Users\Hp Laptop\Desktop\BBc\jquery-ui\jquery-ui.css" rel="stylesheet">
+<script src="C:\Users\Hp Laptop\Desktop\BBc\jquery-ui\jquery-ui.js"></script>
+<style>
+
+#circle{
+width:150px;
+height:150px;
+border-radius:50%;
+margin:10px;
+background-color:green;
+}
+.square{
+width:150px;
+height:150px;
+background-color:red;
+margin:10px;
+display:none;
+}
+</style>
+<title>
+</title>
+</head>
+<body>
+
+<div id="circle"></div>
+
+<p>hi there what are you doing</p>
+<button id="toogle">toogle text</button>
+
+<script>
+ $("#circle").draggable();
+ $("#circle").resizable();
+var t=true;
+$("button").click(function(){
+	if(t)
+	{
+	$("#circle").animate({width:"400px",height:"400px",margin:"40px"},5000);
+    t=false;
+	}
+	else{
+		$("#circle").animate({width:"150px",height:"150px",margin:"0px"},5000);
+	t=true;	
+	}
+	});
+
+
+</script>
+</body>
+</html>
